@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+/* utility classes */
+.flex {
+    display: flex;
+}
+
+
+/* header */
+header{
+    width: 100%;
+    background-image: url("../images/image1.jpg");
+    height: 90vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 100% 200vh;
+    /* background-position: center; */
+    
+}
+/* navbar */
+header nav{
+    max-width: 1248px;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    height: 100px;
+
+}
+header nav .logo h1{
+    font-size: 32px;
+    font-weight: 700;
+}
+nav .nav-links ul{
+    list-style: none;
+    gap: 54px;
+}
+nav .nav-links ul li a{
+    text-decoration: none;
+    color: black;
+}
+nav .nav-links ul li a:active{
+    text-decoration: underline;
+    
+}
+nav .nav-links ul li a:hover{
+    text-decoration: underline;
+    
+}
+nav .login {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+nav .login button{
+    padding: 10px 16px;
+    width: 180px;
+  
+    border-radius: 100px;
+    border: 1px solid #031208;
+    cursor: pointer;
+}
+nav .login .menuicon{
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius:5px ;
+    cursor: pointer;
+
+}
+/* section */
+.hero-section{
+ 
+    max-width: 870px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
+     margin: auto;
+
+}
+
+.hero-section h1{
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+}
+.hero-section p{
+   text-align: center;
+}
+.hero-section .buttons {
+    display: flex;
+    gap: 32px;
+}
+.hero-section .buttons button:first-child{
+background-color: #0053FF;
+padding:14px 16px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+color: white;
+}
+.hero-section .buttons button:last-child{
+    background-color: transparent;
+    border: none;
+    line-height: 26px;
+    text-decoration: underline;
+     cursor: pointer;
+
+}
+
+/* mediaqueries */
+@media screen and (max-width:992px) {
+    header nav{
+    
+     padding:0px 50px;
+    }
+    header nav .nav-links ul{
+        gap: 30px;
+      }
+      nav .login button{
+        /* padding: 10px 16px; */
+        width: 100px;
+      }
+    
+}
+@media screen and (max-width:778px) {
+    header nav{
+        position: relative;
+        padding:0px 10px;
+    }
+    header nav .nav-links ul{
+      flex-direction: column;
+     background-color: white;
+     width: 100%;
+      position: absolute;
+      left: -5%;
+      padding:15px 60px;
+      top: 90%; 
+      height: 100vh;
+     transition: .2s linear;
+    }
+    .toggle{
+         transform: translateX(-100%);
+    }
+    nav .login .menuicon{
+        display: flex;
+    }
+    .hero-section{
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+    }
+    .hero-section p{
+      width: 100%;
+     }
+    .hero-section h1 br{
+        display: none;
+    }
+    .hero-section p br{
+      display: none;
+     }
+}
+@media screen and (max-width:540px) {
+    .hero-section h1{
+        font-size: 42px;
+        line-height: 40px;
+    }
+    .hero-section{
+        padding-top:54px ;
+       justify-content: start;
+       align-items: self-start;
+    }
+    .hero-section p{
+        text-align: start;
+    }
+}
+
+@media screen and (max-width:400px) {
+    header{
+        width: 100%;
+        background-image: url("../images/image1.jpg");
+        height: 100vh;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: 100% 250vh;
+ 
+    }
+}
